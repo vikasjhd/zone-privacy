@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Zone Focus App</title>
-    <meta name="description" content="Privacy Policy for Zone: Zero-Knowledge Architecture.">
+    <title>Zone - Reclaim Your Focus</title>
+    <meta name="description" content="The uncompromising focus timer for professionals. Block distracting apps and reclaim your time.">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -22,66 +22,99 @@
         }
     </script>
 </head>
-<body class="bg-black text-white font-sans antialiased min-h-screen flex flex-col">
+<body class="bg-black text-white font-sans antialiased min-h-screen flex flex-col selection:bg-systemBlue selection:text-white">
 
     <nav class="w-full border-b border-gray-800 bg-black/80 backdrop-blur-md fixed top-0 z-50">
-        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="text-xl font-bold tracking-tight">Zone</a>
-            <a href="support.html" class="text-sm text-gray-400 hover:text-white transition-colors">Support</a>
+            <div class="space-x-6">
+                <a href="support.html" class="text-sm text-gray-400 hover:text-white transition-colors">Support</a>
+                <a href="privacy.html" class="text-sm text-gray-400 hover:text-white transition-colors">Privacy</a>
+            </div>
         </div>
     </nav>
 
-    <main class="flex-grow pt-32 pb-16 px-6">
-        <div class="max-w-3xl mx-auto">
-            
-            <header class="mb-12 text-center">
-                <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">Privacy Policy</h1>
-                <p class="text-xl text-systemBlue font-medium">Effective Date: April 24, 2026</p>
-            </header>
-
-            <div class="bg-systemGray rounded-2xl p-8 md:p-12 border border-gray-800 space-y-10 shadow-xl shadow-black/50">
-                
-                <section>
-                    <h2 class="text-2xl font-semibold mb-4 text-white">1. Zero-Knowledge Architecture</h2>
-                    <p class="text-gray-400 leading-relaxed">Zone is built on a strict "Zero-Knowledge" architecture. The application is designed to function entirely on your local device. We do not require an account, we do not track your app usage, and we do not monitor your screen time.</p>
-                </section>
-
-                <section>
-                    <h2 class="text-2xl font-semibold mb-4 text-white">2. Apple Family Controls</h2>
-                    <p class="text-gray-400 leading-relaxed mb-4">To provide its core distraction-blocking features, Zone utilizes Apple's native FamilyControls and ManagedSettings APIs.</p>
-                    <ul class="list-disc list-outside ml-6 text-gray-400 leading-relaxed space-y-3">
-                        <li><strong class="text-gray-200">Local Processing:</strong> The list of applications and websites you choose to block is encrypted and managed entirely by the iOS operating system.</li>
-                        <li><strong class="text-gray-200">No Developer Access:</strong> We literally cannot see, read, or access the names of the apps or categories you select. This data never leaves your device.</li>
-                    </ul>
-                </section>
-
-                <section>
-                    <h2 class="text-2xl font-semibold mb-4 text-white">3. Data Collection and Storage</h2>
-                    <p class="text-gray-400 leading-relaxed mb-4">Zone collects <strong class="text-white">zero</strong> personal data.</p>
-                    <ul class="list-disc list-outside ml-6 text-gray-400 leading-relaxed space-y-3">
-                        <li>Your focus session history, total time reclaimed, and streak data are saved strictly locally on your device's internal storage using Apple's secure frameworks.</li>
-                        <li>We do not use third-party analytics to track your behavior or screen interactions.</li>
-                        <li>We do not transmit any focus data to remote servers or third-party databases.</li>
-                    </ul>
-                </section>
-
-                <section>
-                    <h2 class="text-2xl font-semibold mb-4 text-white">4. Changes to This Policy</h2>
-                    <p class="text-gray-400 leading-relaxed">If we ever introduce optional features in the future that require data syncing, this policy will be updated, and those features will require your explicit, prior consent.</p>
-                </section>
-
-                <section>
-                    <h2 class="text-2xl font-semibold mb-4 text-white">5. Contact</h2>
-                    <p class="text-gray-400 leading-relaxed">If you have any questions about our privacy practices, please contact us at <a href="mailto:vikas.dev.ios@gmail.com" class="text-systemBlue hover:underline">vikas.dev.ios@gmail.com</a>.</p>
-                </section>
-
+    <main class="flex-grow pt-32 pb-16">
+        
+        <section class="max-w-6xl mx-auto px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-16 mb-32">
+            <div class="flex-1 text-center lg:text-left pt-10">
+                <div class="inline-block bg-blue-500/10 border border-blue-500/20 text-systemBlue px-4 py-1.5 rounded-full text-sm font-semibold mb-6">
+                    Now in TestFlight
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-bold tracking-tight mb-6 leading-tight">
+                    Silence the <br/> <span class="text-gray-500">Noise.</span>
+                </h1>
+                <p class="text-xl text-gray-400 mb-10 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+                    The uncompromising focus timer for professionals. Physically block your most distracting apps and leverage native iOS architecture to keep you in a flow state.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                    <a href="#" class="bg-white text-black font-semibold py-4 px-8 rounded-full hover:bg-gray-200 transition-colors w-full sm:w-auto text-center text-lg">
+                        Coming to App Store
+                    </a>
+                </div>
             </div>
-        </div>
+            
+            <div class="flex-1 flex justify-center lg:justify-end relative">
+                <div class="absolute inset-0 bg-blue-500/20 blur-[100px] rounded-full w-3/4 h-3/4 m-auto"></div>
+                <img src="images/screen-timer.png" alt="Zone Timer Interface" class="relative z-10 w-full max-w-[320px] rounded-[3rem] border-[6px] border-gray-900 shadow-2xl shadow-black">
+            </div>
+        </section>
+
+        <section class="bg-systemGray border-y border-gray-800 py-24">
+            <div class="max-w-6xl mx-auto px-6 lg:px-8 flex flex-col lg:flex-row-reverse items-center gap-16">
+                <div class="flex-1 text-center lg:text-left">
+                    <h2 class="text-3xl lg:text-5xl font-bold mb-6">Strictly Enforced.</h2>
+                    <p class="text-lg text-gray-400 leading-relaxed mb-6">
+                        Standard timers just ring. Zone physically prevents you from opening your biggest distractions. Once Strict Mode is engaged, there is no pausing, no canceling, and no way out until your deep work session is complete.
+                    </p>
+                </div>
+                <div class="flex-1 flex justify-center lg:justify-start">
+                    <img src="images/screen-settings.png" alt="Zone Strict Mode Settings" class="w-full max-w-[280px] rounded-[2.5rem] border border-gray-700 shadow-xl shadow-black/50">
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24">
+            <div class="max-w-6xl mx-auto px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-16">
+                <div class="flex-1 text-center lg:text-left">
+                    <h2 class="text-3xl lg:text-5xl font-bold mb-6">Your Focus, <br/>Your Business.</h2>
+                    <p class="text-lg text-gray-400 leading-relaxed mb-6">
+                        Built exclusively on Apple's native Screen Time API. Zone operates entirely on-device with a Zero-Knowledge architecture. We cannot see, track, or monitor the specific apps you block.
+                    </p>
+                    <a href="privacy.html" class="text-systemBlue hover:underline font-medium">Read our strict Privacy Policy &rarr;</a>
+                </div>
+                <div class="flex-1 flex justify-center lg:justify-end">
+                    <img src="images/screen-privacy.png" alt="Zone Zero Knowledge Architecture" class="w-full max-w-[280px] rounded-[2.5rem] border border-gray-800 shadow-xl shadow-black/50">
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-systemGray border-y border-gray-800 py-24 mb-16">
+            <div class="max-w-6xl mx-auto px-6 lg:px-8 flex flex-col lg:flex-row-reverse items-center gap-16">
+                <div class="flex-1 text-center lg:text-left">
+                    <h2 class="text-3xl lg:text-5xl font-bold mb-6">Reclaim Your Time.</h2>
+                    <p class="text-lg text-gray-400 leading-relaxed mb-6">
+                        Track your focus streaks, monitor how much deep work you've accomplished, and see exactly how many times Zone successfully intervened to block a distraction.
+                    </p>
+                </div>
+                <div class="flex-1 flex justify-center lg:justify-start relative">
+                    <div class="absolute inset-0 bg-blue-500/10 blur-[80px] rounded-full w-full h-full m-auto"></div>
+                    <img src="images/screen-insights.png" alt="Zone Insights Dashboard" class="relative z-10 w-full max-w-[280px] rounded-[2.5rem] border border-gray-700 shadow-xl shadow-black/50">
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <footer class="w-full border-t border-gray-800 mt-auto">
-        <div class="max-w-4xl mx-auto px-6 py-8 text-center text-gray-500 text-sm">
-            <p>&copy; 2026 Vikas Saini. All rights reserved.</p>
+    <footer class="w-full border-t border-gray-800 bg-black">
+        <div class="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-gray-500 text-sm">
+                &copy; 2026 Vikas Saini. All rights reserved.
+            </div>
+            <div class="space-x-6 text-sm">
+                <a href="support.html" class="text-gray-500 hover:text-white transition-colors">Support</a>
+                <a href="privacy.html" class="text-gray-500 hover:text-white transition-colors">Privacy Policy</a>
+            </div>
         </div>
     </footer>
 
