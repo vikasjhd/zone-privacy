@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Zone Focus App</title>
+    <meta name="description" content="Help and support for Zone: Reclaim your Focus.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        systemBlue: '#007AFF',
+                        systemGray: '#1C1C1E',
+                    },
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-black text-white font-sans antialiased min-h-screen flex flex-col">
+
+    <nav class="w-full border-b border-gray-800 bg-black/80 backdrop-blur-md fixed top-0 z-50">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold tracking-tight">Zone</a>
+            <a href="privacy.html" class="text-sm text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
+        </div>
+    </nav>
+
+    <main class="flex-grow pt-32 pb-16 px-6">
+        <div class="max-w-3xl mx-auto">
+            
+            <header class="mb-16 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">How can we help?</h1>
+                <p class="text-xl text-gray-400">Support and frequently asked questions for Zone.</p>
+            </header>
+
+            <div class="bg-systemGray rounded-2xl p-8 mb-16 text-center border border-gray-800">
+                <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/10 text-systemBlue mb-4">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                </div>
+                <h2 class="text-2xl font-semibold mb-2">Contact Support</h2>
+                <p class="text-gray-400 mb-6">Having issues or want to request a feature? Reach out directly to the developer.</p>
+                <a href="mailto:vikas.dev.ios@gmail.com?subject=Zone App Support Request" class="inline-block bg-systemBlue text-white font-semibold py-3 px-8 rounded-full hover:bg-blue-600 transition-colors shadow-lg shadow-blue-500/30">
+                    Email Support
+                </a>
+            </div>
+
+            <h2 class="text-2xl font-bold mb-8">Frequently Asked Questions</h2>
+            
+            <div class="space-y-6">
+                <div class="bg-systemGray rounded-xl p-6 border border-gray-800">
+                    <h3 class="text-lg font-semibold mb-2 text-white">Why does Zone need Screen Time permissions?</h3>
+                    <p class="text-gray-400 leading-relaxed">Zone uses Apple's native Family Controls and DeviceActivity APIs to physically prevent you from opening distracting apps while a focus session is active. This is required for the app shielding feature to work natively on iOS.</p>
+                </div>
+
+                <div class="bg-systemGray rounded-xl p-6 border border-gray-800">
+                    <h3 class="text-lg font-semibold mb-2 text-white">Can you see which apps I am blocking?</h3>
+                    <p class="text-gray-400 leading-relaxed">Absolutely not. Zone operates on a strict zero-knowledge architecture. Apple's frameworks handle the app selection and shielding completely locally on your device. Your data is never sent to any external servers.</p>
+                </div>
+
+                <div class="bg-systemGray rounded-xl p-6 border border-gray-800">
+                    <h3 class="text-lg font-semibold mb-2 text-white">How do I cancel a session if Strict Mode is on?</h3>
+                    <p class="text-gray-400 leading-relaxed">You can't. That is the point of Strict Mode. If you enable Strict Mode, the "End Session" button is disabled to prevent you from abandoning your deep work block. You must wait for the timer to complete to unlock your device's shielded apps.</p>
+                </div>
+
+                 <div class="bg-systemGray rounded-xl p-6 border border-gray-800">
+                    <h3 class="text-lg font-semibold mb-2 text-white">Why isn't the Live Activity showing on my Dynamic Island?</h3>
+                    <p class="text-gray-400 leading-relaxed">Ensure that you are running iOS 16.2 or later, and check that Live Activities are enabled for Zone in your iPhone's main Settings app (Settings > Zone > Live Activities).</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="w-full border-t border-gray-800 mt-auto">
+        <div class="max-w-4xl mx-auto px-6 py-8 text-center text-gray-500 text-sm">
+            <p>&copy; 2026 Vikas Saini. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
