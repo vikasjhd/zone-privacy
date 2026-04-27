@@ -1,53 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zone - Privacy Policy</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
+    <title>Privacy Policy - Zone Focus App</title>
+    <meta name="description" content="Privacy Policy for Zone: Zero-Knowledge Architecture.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        systemBlue: '#007AFF',
+                        systemGray: '#1C1C1E',
+                    },
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+                    }
+                }
+            }
         }
-        h1, h2 { color: #000; }
-        h1 { font-size: 2.5rem; margin-bottom: 10px; }
-        h2 { font-size: 1.5rem; margin-top: 30px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
-        p, li { font-size: 1.1rem; color: #555; }
-        .date { color: #888; font-size: 0.9rem; }
-    </style>
+    </script>
 </head>
-<body>
+<body class="bg-black text-white font-sans antialiased min-h-screen flex flex-col">
 
-    <h1>Privacy Policy for Zone</h1>
-    <p class="date">Effective Date: April 24, 2026</p>
+    <nav class="w-full border-b border-gray-800 bg-black/80 backdrop-blur-md fixed top-0 z-50">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold tracking-tight">Zone</a>
+            <a href="support.html" class="text-sm text-gray-400 hover:text-white transition-colors">Support</a>
+        </div>
+    </nav>
 
-    <h2>1. Zero-Knowledge Architecture</h2>
-    <p>Zone is built on a strict "Zero-Knowledge" architecture. The application is designed to function entirely on your local device. We do not require an account, we do not track your app usage, and we do not monitor your screen time.</p>
+    <main class="flex-grow pt-32 pb-16 px-6">
+        <div class="max-w-3xl mx-auto">
+            
+            <header class="mb-12 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">Privacy Policy</h1>
+                <p class="text-xl text-systemBlue font-medium">Effective Date: April 24, 2026</p>
+            </header>
 
-    <h2>2. Apple Family Controls</h2>
-    <p>To provide its core distraction-blocking features, Zone utilizes Apple's native FamilyControls and ManagedSettings APIs.</p>
-    <ul>
-        <li><strong>Local Processing:</strong> The list of applications and websites you choose to block is encrypted and managed entirely by the iOS operating system.</li>
-        <li><strong>No Developer Access:</strong> We literally cannot see, read, or access the names of the apps or categories you select. This data never leaves your device.</li>
-    </ul>
+            <div class="bg-systemGray rounded-2xl p-8 md:p-12 border border-gray-800 space-y-10 shadow-xl shadow-black/50">
+                
+                <section>
+                    <h2 class="text-2xl font-semibold mb-4 text-white">1. Zero-Knowledge Architecture</h2>
+                    <p class="text-gray-400 leading-relaxed">Zone is built on a strict "Zero-Knowledge" architecture. The application is designed to function entirely on your local device. We do not require an account, we do not track your app usage, and we do not monitor your screen time.</p>
+                </section>
 
-    <h2>3. Data Collection and Storage</h2>
-    <p>Zone collects <strong>zero</strong> personal data.</p>
-    <ul>
-        <li>Your focus session history, total time reclaimed, and streak data are saved strictly locally on your device's internal storage using Apple's secure frameworks.</li>
-        <li>We do not use third-party analytics to track your behavior or screen interactions.</li>
-        <li>We do not transmit any focus data to remote servers or third-party databases.</li>
-    </ul>
+                <section>
+                    <h2 class="text-2xl font-semibold mb-4 text-white">2. Apple Family Controls</h2>
+                    <p class="text-gray-400 leading-relaxed mb-4">To provide its core distraction-blocking features, Zone utilizes Apple's native FamilyControls and ManagedSettings APIs.</p>
+                    <ul class="list-disc list-outside ml-6 text-gray-400 leading-relaxed space-y-3">
+                        <li><strong class="text-gray-200">Local Processing:</strong> The list of applications and websites you choose to block is encrypted and managed entirely by the iOS operating system.</li>
+                        <li><strong class="text-gray-200">No Developer Access:</strong> We literally cannot see, read, or access the names of the apps or categories you select. This data never leaves your device.</li>
+                    </ul>
+                </section>
 
-    <h2>4. Changes to This Policy</h2>
-    <p>If we ever introduce optional features in the future that require data syncing, this policy will be updated, and those features will require your explicit, prior consent.</p>
+                <section>
+                    <h2 class="text-2xl font-semibold mb-4 text-white">3. Data Collection and Storage</h2>
+                    <p class="text-gray-400 leading-relaxed mb-4">Zone collects <strong class="text-white">zero</strong> personal data.</p>
+                    <ul class="list-disc list-outside ml-6 text-gray-400 leading-relaxed space-y-3">
+                        <li>Your focus session history, total time reclaimed, and streak data are saved strictly locally on your device's internal storage using Apple's secure frameworks.</li>
+                        <li>We do not use third-party analytics to track your behavior or screen interactions.</li>
+                        <li>We do not transmit any focus data to remote servers or third-party databases.</li>
+                    </ul>
+                </section>
 
-    <h2>5. Contact</h2>
-    <p>If you have any questions about our privacy practices, please contact us at vikas.dev.ios@gmail.com.</p>
+                <section>
+                    <h2 class="text-2xl font-semibold mb-4 text-white">4. Changes to This Policy</h2>
+                    <p class="text-gray-400 leading-relaxed">If we ever introduce optional features in the future that require data syncing, this policy will be updated, and those features will require your explicit, prior consent.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold mb-4 text-white">5. Contact</h2>
+                    <p class="text-gray-400 leading-relaxed">If you have any questions about our privacy practices, please contact us at <a href="mailto:vikas.dev.ios@gmail.com" class="text-systemBlue hover:underline">vikas.dev.ios@gmail.com</a>.</p>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="w-full border-t border-gray-800 mt-auto">
+        <div class="max-w-4xl mx-auto px-6 py-8 text-center text-gray-500 text-sm">
+            <p>&copy; 2026 Vikas Saini. All rights reserved.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
