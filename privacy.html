@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Zone Focus App</title>
-    <meta name="description" content="Privacy Policy for Zone: Zero-Knowledge Architecture.">
+    <meta name="description" content="Privacy Policy for Zone: Zero-Knowledge focus data with minimal Live Activity scheduling.">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -36,52 +36,62 @@
             
             <header class="mb-12 text-center">
                 <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">Privacy Policy</h1>
-                <p class="text-xl text-systemBlue font-medium">Effective Date: April 24, 2026</p>
+                <p class="text-xl text-systemBlue font-medium">Effective Date: May 12, 2026</p>
             </header>
 
             <div class="bg-systemGray rounded-2xl p-8 md:p-12 border border-gray-800 space-y-10 shadow-xl shadow-black/50">
                 
                 <section>
                     <h2 class="text-2xl font-semibold mb-4 text-white">1. Zero-Knowledge Architecture</h2>
-                    <p class="text-gray-400 leading-relaxed">Zone is built on a strict "Zero-Knowledge" architecture. The application is designed to function entirely on your local device. We do not require an account, we do not track your app usage, and we do not monitor your screen time.</p>
+                    <p class="text-gray-400 leading-relaxed">Zone is built on a strict "Zero-Knowledge" privacy model for your focus data. We do not require an account, we do not track your app usage, we do not monitor your screen time, and we do not collect analytics about your behavior.</p>
                 </section>
 
                 <section>
                     <h2 class="text-2xl font-semibold mb-4 text-white">2. Apple Family Controls</h2>
-                    <p class="text-gray-400 leading-relaxed mb-4">To provide its core distraction-blocking features, Zone utilizes Apple's native FamilyControls and ManagedSettings APIs.</p>
+                    <p class="text-gray-400 leading-relaxed mb-4">To provide its core distraction-blocking features, Zone uses Apple's native FamilyControls and ManagedSettings APIs.</p>
                     <ul class="list-disc list-outside ml-6 text-gray-400 leading-relaxed space-y-3">
-                        <li><strong class="text-gray-200">Local Processing:</strong> The list of applications and websites you choose to block is encrypted and managed entirely by the iOS operating system.</li>
-                        <li><strong class="text-gray-200">No Developer Access:</strong> We literally cannot see, read, or access the names of the apps or categories you select. This data never leaves your device.</li>
+                        <li><strong class="text-gray-200">Local Processing:</strong> The list of applications, websites, and categories you choose to block is encrypted and managed by iOS.</li>
+                        <li><strong class="text-gray-200">No Developer Access:</strong> We cannot see, read, or access the names of the apps, websites, or categories you select. This selection data never leaves your device.</li>
                     </ul>
                 </section>
 
                 <section>
                     <h2 class="text-2xl font-semibold mb-4 text-white">3. Data Collection and Storage</h2>
-                    <p class="text-gray-400 leading-relaxed mb-4">Zone collects <strong class="text-white">zero</strong> personal data.</p>
+                    <p class="text-gray-400 leading-relaxed mb-4">Zone does not collect account, identity, advertising, analytics, app-selection, or screen-time data.</p>
                     <ul class="list-disc list-outside ml-6 text-gray-400 leading-relaxed space-y-3">
-                        <li>Your focus session history, total time reclaimed, and streak data are saved strictly locally on your device's internal storage using Apple's secure frameworks.</li>
-                        <li>We do not use third-party analytics to track your behavior or screen interactions.</li>
-                        <li>We do not transmit any focus data to remote servers or third-party databases.</li>
+                        <li>Your focus session history, total time reclaimed, streak data, insights, and weekly summaries are saved locally on your device.</li>
+                        <li>We do not use third-party analytics SDKs to track your behavior or screen interactions.</li>
+                        <li>We do not sell, rent, or share your personal data with advertisers or data brokers.</li>
                     </ul>
                 </section>
 
                 <section>
-                    <h2 class="text-2xl font-semibold mb-4 text-white">4. Apple Health Integration</h2>
-                    <p class="text-gray-400 leading-relaxed mb-4">Zone offers an optional feature to sync your completed deep work sessions to the Apple Health app as "Mindful Minutes."</p>
+                    <h2 class="text-2xl font-semibold mb-4 text-white">4. Live Activities and Dynamic Island</h2>
+                    <p class="text-gray-400 leading-relaxed mb-4">Zone uses Apple's Live Activity system to keep your Lock Screen and Dynamic Island timer updated. To support completion updates when the app is not open, Zone sends a minimal scheduling payload to our Google Cloud backend.</p>
                     <ul class="list-disc list-outside ml-6 text-gray-400 leading-relaxed space-y-3">
-                        <li><strong class="text-gray-200">Local Writing Only:</strong> Zone only requests permission to <em>write</em> data to your local Apple Health database. We do not read your other health metrics.</li>
-                        <li><strong class="text-gray-200">No Transmission:</strong> Your health data is never transmitted to our servers, nor is it stored outside of your personal device.</li>
+                        <li><strong class="text-gray-200">What is sent:</strong> The Live Activity push token, remaining timer seconds, running or completion state, and APNs environment.</li>
+                        <li><strong class="text-gray-200">What is not sent:</strong> Your blocked app list, websites, app categories, focus history, streaks, insights, Apple Health data, name, email address, or account information.</li>
+                        <li><strong class="text-gray-200">Purpose:</strong> This data is used only to schedule and deliver Live Activity updates through Apple Push Notification service.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold mb-4 text-white">5. Apple Health Integration</h2>
+                    <p class="text-gray-400 leading-relaxed mb-4">Zone offers an optional feature to save your completed deep work sessions to the Apple Health app as "Mindful Minutes."</p>
+                    <ul class="list-disc list-outside ml-6 text-gray-400 leading-relaxed space-y-3">
+                        <li><strong class="text-gray-200">Local Writing Only:</strong> Zone only requests permission to <em>write</em> Mindful Minutes to your local Apple Health database. We do not read your other health metrics.</li>
+                        <li><strong class="text-gray-200">No Transmission:</strong> Your Apple Health data is never transmitted to our servers.</li>
                         <li><strong class="text-gray-200">Strictly Private:</strong> We will never sell, share, or use your Apple Health data for advertising, marketing, or data-broker purposes.</li>
                     </ul>
                 </section>
 
                 <section>
-                    <h2 class="text-2xl font-semibold mb-4 text-white">5. Changes to This Policy</h2>
-                    <p class="text-gray-400 leading-relaxed">If we ever introduce optional features in the future that require data syncing, this policy will be updated, and those features will require your explicit, prior consent.</p>
+                    <h2 class="text-2xl font-semibold mb-4 text-white">6. Changes to This Policy</h2>
+                    <p class="text-gray-400 leading-relaxed">If we introduce optional features in the future that require additional data processing or syncing, this policy will be updated, and those features will require your explicit, prior consent where required.</p>
                 </section>
 
                 <section>
-                    <h2 class="text-2xl font-semibold mb-4 text-white">6. Contact</h2>
+                    <h2 class="text-2xl font-semibold mb-4 text-white">7. Contact</h2>
                     <p class="text-gray-400 leading-relaxed">If you have any questions about our privacy practices, please contact us at <a href="mailto:vikas.dev.ios@gmail.com" class="text-systemBlue hover:underline">vikas.dev.ios@gmail.com</a>.</p>
                 </section>
 

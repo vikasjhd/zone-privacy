@@ -41,7 +41,9 @@
 
             <div class="bg-systemGray rounded-2xl p-8 mb-16 text-center border border-gray-800">
                 <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/10 text-systemBlue mb-4">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
                 </div>
                 <h2 class="text-2xl font-semibold mb-2">Contact Support</h2>
                 <p class="text-gray-400 mb-6">Having issues or want to request a feature? Reach out directly to the developer.</p>
@@ -55,27 +57,32 @@
             <div class="space-y-6">
                 <div class="bg-systemGray rounded-xl p-6 border border-gray-800">
                     <h3 class="text-lg font-semibold mb-2 text-white">Why does Zone need Screen Time permissions?</h3>
-                    <p class="text-gray-400 leading-relaxed">Zone uses Apple's native Family Controls and DeviceActivity APIs to physically prevent you from opening distracting apps while a focus session is active. This is required for the app shielding feature to work natively on iOS.</p>
+                    <p class="text-gray-400 leading-relaxed">Zone uses Apple's native FamilyControls and DeviceActivity APIs to prevent you from opening distracting apps while a focus session is active. This permission is required for app shielding to work natively on iOS.</p>
                 </div>
 
                 <div class="bg-systemGray rounded-xl p-6 border border-gray-800">
                     <h3 class="text-lg font-semibold mb-2 text-white">Can you see which apps I am blocking?</h3>
-                    <p class="text-gray-400 leading-relaxed">Absolutely not. Zone operates on a strict zero-knowledge architecture. Apple's frameworks handle the app selection and shielding completely locally on your device. Your data is never sent to any external servers.</p>
+                    <p class="text-gray-400 leading-relaxed">No. Zone operates on a strict zero-knowledge privacy model for app selection and shielding. Apple's frameworks handle app selection locally on your device, and we cannot see, read, or access the names of the apps, websites, or categories you block. For Live Activity updates only, Zone sends a minimal timer scheduling payload as described in the Privacy Policy.</p>
+                </div>
+
+                <div class="bg-systemGray rounded-xl p-6 border border-gray-800">
+                    <h3 class="text-lg font-semibold mb-2 text-white">Does Zone use a server?</h3>
+                    <p class="text-gray-400 leading-relaxed">Zone does not use a server for accounts, analytics, blocked app selections, focus history, streaks, insights, weekly summaries, or Apple Health data. A minimal Google Cloud scheduler is used only to help update Live Activities and Dynamic Island when a timer completes while the app is not open.</p>
                 </div>
 
                 <div class="bg-systemGray rounded-xl p-6 border border-gray-800">
                     <h3 class="text-lg font-semibold mb-2 text-white">How do I cancel a session if Strict Mode is on?</h3>
-                    <p class="text-gray-400 leading-relaxed">You can't. That is the point of Strict Mode. If you enable Strict Mode, the "End Session" button is disabled to prevent you from abandoning your deep work block. You must wait for the timer to complete to unlock your device's shielded apps.</p>
+                    <p class="text-gray-400 leading-relaxed">You can't. That is the point of Strict Mode. If you enable Strict Mode, the "End Session" button is disabled to prevent you from abandoning your deep work block. You must wait for the timer to complete to unlock your shielded apps.</p>
                 </div>
 
                 <div class="bg-systemGray rounded-xl p-6 border border-gray-800">
                     <h3 class="text-lg font-semibold mb-2 text-white">Why isn't the Live Activity showing on my Dynamic Island?</h3>
-                    <p class="text-gray-400 leading-relaxed">Ensure that you are running iOS 16.2 or later, and check that Live Activities are enabled for Zone in your iPhone's main Settings app (Settings > Zone > Live Activities).</p>
+                    <p class="text-gray-400 leading-relaxed">Ensure that you are running iOS 18 or later, and check that Live Activities are enabled for Zone in your iPhone's main Settings app (Settings > Zone > Live Activities).</p>
                 </div>
 
                 <div class="bg-systemGray rounded-xl p-6 border border-gray-800">
                     <h3 class="text-lg font-semibold mb-2 text-white">How does the Apple Health integration work?</h3>
-                    <p class="text-gray-400 leading-relaxed">If enabled in Settings, Zone can save your completed deep work sessions to the Apple Health app as "Mindful Minutes." We only request <em>write</em> access, meaning we cannot read your personal health metrics. If sessions are not syncing, check <strong>iOS Settings > Health > Data Access & Devices > Zone</strong> to ensure permission is granted.</p>
+                    <p class="text-gray-400 leading-relaxed">If enabled in Settings, Zone can save your completed deep work sessions to the Apple Health app as "Mindful Minutes." We only request <em>write</em> access, meaning we cannot read your personal health metrics. If sessions are not syncing, check <strong>iOS Settings > Health > Data Access &amp; Devices > Zone</strong> to ensure permission is granted.</p>
                 </div>
             </div>
 
