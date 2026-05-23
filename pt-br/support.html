@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suporte - Zone Focus App</title>
+    <meta name="description" content="Ajuda e suporte para o Zone: recupere seu foco.">
+    <link rel="canonical" href="https://vikasjhd.github.io/zone-privacy/pt-br/support.html">
+    <link rel="alternate" hreflang="en" href="https://vikasjhd.github.io/zone-privacy/support.html">
+    <link rel="alternate" hreflang="en-GB" href="https://vikasjhd.github.io/zone-privacy/en-gb/support.html">
+    <link rel="alternate" hreflang="en-CA" href="https://vikasjhd.github.io/zone-privacy/en-ca/support.html">
+    <link rel="alternate" hreflang="en-AU" href="https://vikasjhd.github.io/zone-privacy/en-au/support.html">
+    <link rel="alternate" hreflang="es" href="https://vikasjhd.github.io/zone-privacy/es/support.html">
+    <link rel="alternate" hreflang="es-MX" href="https://vikasjhd.github.io/zone-privacy/es-mx/support.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://vikasjhd.github.io/zone-privacy/pt-br/support.html">
+    <link rel="alternate" hreflang="fr" href="https://vikasjhd.github.io/zone-privacy/fr/support.html">
+    <link rel="alternate" hreflang="de" href="https://vikasjhd.github.io/zone-privacy/de/support.html">
+    <link rel="alternate" hreflang="it" href="https://vikasjhd.github.io/zone-privacy/it/support.html">
+    <link rel="alternate" hreflang="x-default" href="https://vikasjhd.github.io/zone-privacy/support.html">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        systemBlue: '#007AFF',
+                        systemGray: '#1C1C1E',
+                    },
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-black text-white font-sans antialiased min-h-screen flex flex-col">
+
+    <nav class="w-full border-b border-gray-800 bg-black/80 backdrop-blur-md fixed top-0 z-50">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center gap-4">
+            <a href="index.html" class="text-xl font-bold tracking-tight">Zone</a>
+            <div class="flex items-center gap-4 sm:gap-6">
+                
+                <a href="privacy.html" class="text-sm text-gray-400 hover:text-white transition-colors">Política de Privacidade</a>
+                
+                <label class="sr-only" for="language-switcher">Idioma</label>
+                <select id="language-switcher" class="max-w-[150px] rounded-full border border-gray-700 bg-black px-3 py-2 text-xs text-gray-300 outline-none transition-colors hover:border-gray-500 focus:border-systemBlue" onchange="window.location.href = this.value">
+                    <option value="../support.html">English</option><option value="../en-gb/support.html">English (UK)</option><option value="../en-ca/support.html">English (Canada)</option><option value="../en-au/support.html">English (Australia)</option><option value="../es/support.html">Español (España)</option><option value="../es-mx/support.html">Español (México)</option><option value="support.html" selected>Português (Brasil)</option><option value="../fr/support.html">Français</option><option value="../de/support.html">Deutsch</option><option value="../it/support.html">Italiano</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow pt-32 pb-16 px-6">
+        <div class="max-w-3xl mx-auto">
+            <header class="mb-16 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">Como podemos ajudar?</h1>
+                <p class="text-xl text-gray-400">Suporte e perguntas frequentes sobre o Zone.</p>
+            </header>
+
+            <div class="bg-systemGray rounded-2xl p-8 mb-16 text-center border border-gray-800">
+                <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/10 text-systemBlue mb-4">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                </div>
+                <h2 class="text-2xl font-semibold mb-2">Entrar em contato com o suporte</h2>
+                <p class="text-gray-400 mb-6">Está com problemas ou quer pedir um recurso? Fale diretamente com o desenvolvedor.</p>
+                <a href="mailto:vikas.dev.ios@gmail.com?subject=Solicita%C3%A7%C3%A3o%20de%20suporte%20do%20Zone" class="inline-block bg-systemBlue text-white font-semibold py-3 px-8 rounded-full hover:bg-blue-600 transition-colors shadow-lg shadow-blue-500/30">
+                    Enviar e-mail ao suporte
+                </a>
+            </div>
+
+            <h2 class="text-2xl font-bold mb-8">Perguntas frequentes</h2>
+            <div class="space-y-6">
+                
+                <div class="bg-systemGray rounded-xl p-6 border border-gray-800">
+                    <h3 class="text-lg font-semibold mb-2 text-white">Por que o Zone precisa de permissões de Tempo de Uso?</h3>
+                    <p class="text-gray-400 leading-relaxed">O Zone usa as APIs nativas FamilyControls e DeviceActivity da Apple para impedir que você abra apps que distraem enquanto uma sessão de foco está ativa. Essa permissão é necessária para que o bloqueio de apps funcione de forma nativa no iOS.</p>
+                </div>
+
+                <div class="bg-systemGray rounded-xl p-6 border border-gray-800">
+                    <h3 class="text-lg font-semibold mb-2 text-white">Vocês conseguem ver quais apps eu bloqueio?</h3>
+                    <p class="text-gray-400 leading-relaxed">Não. O Zone funciona com um modelo estrito de privacidade de conhecimento zero para seleção e bloqueio de apps. Os frameworks da Apple lidam com a seleção de apps localmente no seu dispositivo, e não conseguimos ver, ler nem acessar os nomes dos apps, sites ou categorias que você bloqueia. Somente para Live Activities, o Zone envia uma carga mínima de agendamento do timer, conforme descrito na Política de Privacidade.</p>
+                </div>
+
+                <div class="bg-systemGray rounded-xl p-6 border border-gray-800">
+                    <h3 class="text-lg font-semibold mb-2 text-white">O Zone usa um servidor?</h3>
+                    <p class="text-gray-400 leading-relaxed">O Zone não usa servidor para contas, analytics, seleções de apps bloqueados, histórico de foco, sequências, estatísticas, resumos semanais ou dados do Apple Health. Um agendador mínimo no Google Cloud é usado apenas para ajudar a atualizar Live Activities e Dynamic Island quando um timer termina enquanto o app não está aberto.</p>
+                </div>
+
+                <div class="bg-systemGray rounded-xl p-6 border border-gray-800">
+                    <h3 class="text-lg font-semibold mb-2 text-white">Como cancelo uma sessão se o Modo Estrito estiver ativado?</h3>
+                    <p class="text-gray-400 leading-relaxed">Você não cancela. Esse é o objetivo do Modo Estrito. Se você ativar o Modo Estrito, o botão "Encerrar sessão" é desativado para impedir que você abandone seu bloco de trabalho profundo. É preciso esperar o timer terminar para desbloquear os apps protegidos.</p>
+                </div>
+
+                <div class="bg-systemGray rounded-xl p-6 border border-gray-800">
+                    <h3 class="text-lg font-semibold mb-2 text-white">Por que a Live Activity não aparece na Dynamic Island?</h3>
+                    <p class="text-gray-400 leading-relaxed">Verifique se você está usando iOS 18 ou posterior e se as Live Activities estão ativadas para o Zone no app Ajustes do iPhone (Ajustes &gt; Zone &gt; Live Activities).</p>
+                </div>
+
+                <div class="bg-systemGray rounded-xl p-6 border border-gray-800">
+                    <h3 class="text-lg font-semibold mb-2 text-white">Como funciona a integração com o Apple Health?</h3>
+                    <p class="text-gray-400 leading-relaxed">Se ativado em Ajustes, o Zone pode salvar suas sessões concluídas de trabalho profundo no app Apple Health como "Mindful Minutes". Solicitamos apenas acesso de <em>gravação</em>, ou seja, não conseguimos ler suas métricas pessoais de saúde. Se as sessões não estiverem sincronizando, confira <strong>Ajustes do iOS &gt; Saúde &gt; Acesso a Dados e Dispositivos &gt; Zone</strong> para garantir que a permissão foi concedida.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="w-full border-t border-gray-800 bg-black">
+        <div class="max-w-4xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-gray-500 text-sm">
+                &copy; 2026 Vikas Saini. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es-MX" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de privacidad - Zone Focus App</title>
+    <meta name="description" content="Política de privacidad de Zone: datos de concentración con conocimiento cero y programación mínima de Live Activities.">
+    <link rel="canonical" href="https://vikasjhd.github.io/zone-privacy/es-mx/privacy.html">
+    <link rel="alternate" hreflang="en" href="https://vikasjhd.github.io/zone-privacy/privacy.html">
+    <link rel="alternate" hreflang="en-GB" href="https://vikasjhd.github.io/zone-privacy/en-gb/privacy.html">
+    <link rel="alternate" hreflang="en-CA" href="https://vikasjhd.github.io/zone-privacy/en-ca/privacy.html">
+    <link rel="alternate" hreflang="en-AU" href="https://vikasjhd.github.io/zone-privacy/en-au/privacy.html">
+    <link rel="alternate" hreflang="es" href="https://vikasjhd.github.io/zone-privacy/es/privacy.html">
+    <link rel="alternate" hreflang="es-MX" href="https://vikasjhd.github.io/zone-privacy/es-mx/privacy.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://vikasjhd.github.io/zone-privacy/pt-br/privacy.html">
+    <link rel="alternate" hreflang="fr" href="https://vikasjhd.github.io/zone-privacy/fr/privacy.html">
+    <link rel="alternate" hreflang="de" href="https://vikasjhd.github.io/zone-privacy/de/privacy.html">
+    <link rel="alternate" hreflang="it" href="https://vikasjhd.github.io/zone-privacy/it/privacy.html">
+    <link rel="alternate" hreflang="x-default" href="https://vikasjhd.github.io/zone-privacy/privacy.html">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        systemBlue: '#007AFF',
+                        systemGray: '#1C1C1E',
+                    },
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-black text-white font-sans antialiased min-h-screen flex flex-col">
+
+    <nav class="w-full border-b border-gray-800 bg-black/80 backdrop-blur-md fixed top-0 z-50">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center gap-4">
+            <a href="index.html" class="text-xl font-bold tracking-tight">Zone</a>
+            <div class="flex items-center gap-4 sm:gap-6">
+                <a href="support.html" class="text-sm text-gray-400 hover:text-white transition-colors">Soporte</a>
+                
+                
+                <label class="sr-only" for="language-switcher">Idioma</label>
+                <select id="language-switcher" class="max-w-[150px] rounded-full border border-gray-700 bg-black px-3 py-2 text-xs text-gray-300 outline-none transition-colors hover:border-gray-500 focus:border-systemBlue" onchange="window.location.href = this.value">
+                    <option value="../privacy.html">English</option><option value="../en-gb/privacy.html">English (UK)</option><option value="../en-ca/privacy.html">English (Canada)</option><option value="../en-au/privacy.html">English (Australia)</option><option value="../es/privacy.html">Español (España)</option><option value="privacy.html" selected>Español (México)</option><option value="../pt-br/privacy.html">Português (Brasil)</option><option value="../fr/privacy.html">Français</option><option value="../de/privacy.html">Deutsch</option><option value="../it/privacy.html">Italiano</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow pt-32 pb-16 px-6">
+        <div class="max-w-3xl mx-auto">
+            <header class="mb-12 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">Política de privacidad</h1>
+                <p class="text-xl text-systemBlue font-medium">Fecha de entrada en vigor: 12 de mayo de 2026</p>
+                <p class="mt-4 text-sm text-gray-500 leading-relaxed">Esta versión localizada sigue fielmente el texto fuente en inglés para conservar la misma información y alcance.</p>
+            </header>
+
+            <div class="bg-systemGray rounded-2xl p-8 md:p-12 border border-gray-800 space-y-10 shadow-xl shadow-black/50">
+                
+                <section>
+                    <h2 class="text-2xl font-semibold mb-4 text-white">1. Arquitectura de conocimiento cero</h2>
+                    <p class="text-gray-400 leading-relaxed">Zone está construido sobre un modelo estricto de privacidad de "conocimiento cero" para tus datos de concentración. No requerimos una cuenta, no rastreamos el uso que haces de las apps, no monitoreamos tu tiempo en pantalla y no recopilamos analíticas sobre tu comportamiento.</p>
+                    
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold mb-4 text-white">2. Controles Familiares de Apple</h2>
+                    <p class="text-gray-400 leading-relaxed mb-4">Para ofrecer sus funciones principales de bloqueo de distracciones, Zone utiliza las API nativas FamilyControls y ManagedSettings de Apple.</p>
+                    <ul class="list-disc list-outside ml-6 text-gray-400 leading-relaxed space-y-3">
+                        <li><strong class="text-gray-200">Procesamiento local:</strong> La lista de aplicaciones, sitios web y categorías que eliges bloquear se cifra y se gestiona mediante iOS.</li>
+                        <li><strong class="text-gray-200">Sin acceso del desarrollador:</strong> No podemos ver, leer ni acceder a los nombres de las apps, sitios web o categorías que seleccionas. Estos datos de selección nunca salen de tu dispositivo.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold mb-4 text-white">3. Recopilación y almacenamiento de datos</h2>
+                    <p class="text-gray-400 leading-relaxed mb-4">Zone no recopila datos de cuenta, identidad, publicidad, analíticas, selección de apps ni tiempo en pantalla.</p>
+                    <ul class="list-disc list-outside ml-6 text-gray-400 leading-relaxed space-y-3">
+                        <li>Tu historial de sesiones de concentración, tiempo total recuperado, datos de rachas, estadísticas y resúmenes semanales se guardan localmente en tu dispositivo.</li>
+                        <li>No utilizamos SDK de analíticas de terceros para rastrear tu comportamiento o tus interacciones en pantalla.</li>
+                        <li>No vendemos, rentamos ni compartimos tus datos personales con anunciantes ni intermediarios de datos.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold mb-4 text-white">4. Live Activities y Dynamic Island</h2>
+                    <p class="text-gray-400 leading-relaxed mb-4">Zone utiliza el sistema Live Activity de Apple para mantener actualizado el temporizador en tu pantalla bloqueada y Dynamic Island. Para permitir actualizaciones de finalización cuando la app no está abierta, Zone envía una carga mínima de programación a nuestro backend de Google Cloud.</p>
+                    <ul class="list-disc list-outside ml-6 text-gray-400 leading-relaxed space-y-3">
+                        <li><strong class="text-gray-200">Qué se envía:</strong> el token push de la Live Activity, los segundos restantes del temporizador, el estado en ejecución o de finalización y el entorno de APNs.</li>
+                        <li><strong class="text-gray-200">Qué no se envía:</strong> tu lista de apps bloqueadas, sitios web, categorías de apps, historial de concentración, rachas, estadísticas, datos de Apple Health, nombre, dirección de correo electrónico ni información de cuenta.</li>
+                        <li><strong class="text-gray-200">Finalidad:</strong> estos datos se utilizan únicamente para programar y entregar actualizaciones de Live Activities mediante Apple Push Notification service.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold mb-4 text-white">5. Integración con Apple Health</h2>
+                    <p class="text-gray-400 leading-relaxed mb-4">Zone ofrece una función opcional para guardar tus sesiones de trabajo profundo completadas en la app Apple Health como "Mindful Minutes".</p>
+                    <ul class="list-disc list-outside ml-6 text-gray-400 leading-relaxed space-y-3">
+                        <li><strong class="text-gray-200">Solo escritura local:</strong> Zone solo solicita permiso para <em>escribir</em> Mindful Minutes en tu base de datos local de Apple Health. No leemos tus demás métricas de salud.</li>
+                        <li><strong class="text-gray-200">Sin transmisión:</strong> tus datos de Apple Health nunca se transmiten a nuestros servidores.</li>
+                        <li><strong class="text-gray-200">Estrictamente privado:</strong> nunca venderemos, compartiremos ni utilizaremos tus datos de Apple Health para publicidad, marketing ni fines de intermediación de datos.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold mb-4 text-white">6. Cambios en esta política</h2>
+                    <p class="text-gray-400 leading-relaxed">Si en el futuro introducimos funciones opcionales que requieran procesamiento adicional de datos o sincronización, actualizaremos esta política, y esas funciones requerirán tu consentimiento explícito y previo cuando corresponda.</p>
+                    
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold mb-4 text-white">7. Contacto</h2>
+                    <p class="text-gray-400 leading-relaxed">Si tienes preguntas sobre nuestras prácticas de privacidad, contáctanos en <a href="mailto:vikas.dev.ios@gmail.com" class="text-systemBlue hover:underline">vikas.dev.ios@gmail.com</a>.</p>
+                    
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="w-full border-t border-gray-800 bg-black">
+        <div class="max-w-4xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-gray-500 text-sm">
+                &copy; 2026 Vikas Saini. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
