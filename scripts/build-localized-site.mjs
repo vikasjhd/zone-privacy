@@ -1,4 +1,4 @@
-import { mkdirSync, writeFileSync } from 'node:fs';
+import { copyFileSync, existsSync, mkdirSync, readdirSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -19,6 +19,28 @@ const locales = [
 ];
 
 const pages = ['index', 'support', 'privacy'];
+
+const localeImageSources = {
+  en: 'English',
+  'en-GB': 'English (UK)',
+  'en-CA': 'English (Canada)',
+  'en-AU': 'English (Australia)',
+  es: 'Spanish',
+  'es-MX': 'Spanish (Mexico)',
+  'pt-BR': 'Portuguese (Brazil)',
+  fr: 'French',
+  de: 'German',
+  it: 'Italian',
+};
+
+const marketingScreenshots = [
+  ['screen-timer.png', 0],
+  ['screen-settings.png', 1],
+  ['screen-privacy.png', 2],
+  ['screen-app-picker.png', 3],
+  ['screen-insights.png', 4],
+  ['screen-active-session.png', 5],
+];
 
 const english = {
   common: {
@@ -980,6 +1002,57 @@ function assetPath(locale, path) {
   return locale.dir === '.' ? path : `../${path}`;
 }
 
+function localizedImageDir(locale) {
+  return locale.dir === '.' ? 'en' : locale.dir;
+}
+
+function localizedImagePath(locale, fileName) {
+  return assetPath(locale, `images/localized/${localizedImageDir(locale)}/${fileName}`);
+}
+
+function rawScreenshotDirectory(locale) {
+  const sourceFolder = localeImageSources[locale.code];
+  if (!sourceFolder) {
+    throw new Error(`Missing screenshot source mapping for locale ${locale.code}`);
+  }
+
+  return join(rootDir, 'images', 'Raw Screenshots', sourceFolder, 'iPhone');
+}
+
+function rawScreenshotFiles(locale) {
+  const directory = rawScreenshotDirectory(locale);
+  if (!existsSync(directory)) {
+    throw new Error(`Missing raw screenshot directory: ${directory}`);
+  }
+
+  const files = readdirSync(directory)
+    .filter((file) => file.toLowerCase().endsWith('.png'))
+    .sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }));
+
+  if (files.length < 6) {
+    throw new Error(`Expected at least 6 raw screenshots for ${locale.code}, found ${files.length}`);
+  }
+
+  return files.map((file) => join(directory, file));
+}
+
+function syncLocalizedMarketingImages() {
+  for (const locale of locales) {
+    const sourceFiles = rawScreenshotFiles(locale);
+    const outputDirectory = join(rootDir, 'images', 'localized', localizedImageDir(locale));
+    mkdirSync(outputDirectory, { recursive: true });
+
+    for (const [fileName, sourceIndex] of marketingScreenshots) {
+      const source = sourceFiles[sourceIndex];
+      if (!source) {
+        throw new Error(`Missing raw screenshot index ${sourceIndex} for ${locale.code}`);
+      }
+
+      copyFileSync(source, join(outputDirectory, fileName));
+    }
+  }
+}
+
 function alternateLinks(page) {
   return [
     ...locales.map((locale) => `    <link rel="alternate" hreflang="${locale.code}" href="${absoluteUrl(locale, page)}">`),
@@ -1089,7 +1162,7 @@ ${nav(locale, 'index', copy, 'max-w-6xl')}
             </div>
             <div class="flex-1 flex justify-center lg:justify-end relative">
                 <div class="absolute inset-0 bg-blue-500/20 blur-[100px] rounded-full w-3/4 h-3/4 m-auto"></div>
-                <img src="${assetPath(locale, 'images/screen-timer.png')}" alt="${escapeAttribute(c.timerAlt)}" class="relative z-10 w-full max-w-[320px] rounded-[3rem] border-[6px] border-gray-900 shadow-2xl shadow-black">
+                <img src="${localizedImagePath(locale, 'screen-timer.png')}" alt="${escapeAttribute(c.timerAlt)}" class="relative z-10 w-full max-w-[320px] rounded-[3rem] border-[6px] border-gray-900 shadow-2xl shadow-black">
             </div>
         </section>
 
@@ -1100,7 +1173,7 @@ ${nav(locale, 'index', copy, 'max-w-6xl')}
                     <p class="text-lg text-gray-400 leading-relaxed mb-6">${escapeHtml(c.appPickerBody)}</p>
                 </div>
                 <div class="flex-1 flex justify-center lg:justify-start">
-                    <img src="${assetPath(locale, 'images/screen-app-picker.png')}" alt="${escapeAttribute(c.appPickerAlt)}" class="w-full max-w-[280px] rounded-[2.5rem] border border-gray-700 shadow-xl shadow-black/50">
+                    <img src="${localizedImagePath(locale, 'screen-app-picker.png')}" alt="${escapeAttribute(c.appPickerAlt)}" class="w-full max-w-[280px] rounded-[2.5rem] border border-gray-700 shadow-xl shadow-black/50">
                 </div>
             </div>
         </section>
@@ -1112,7 +1185,7 @@ ${nav(locale, 'index', copy, 'max-w-6xl')}
                     <p class="text-lg text-gray-400 leading-relaxed mb-6">${escapeHtml(c.strictBody)}</p>
                 </div>
                 <div class="flex-1 flex justify-center lg:justify-end">
-                    <img src="${assetPath(locale, 'images/screen-settings.png')}" alt="${escapeAttribute(c.strictAlt)}" class="w-full max-w-[280px] rounded-[2.5rem] border border-gray-800 shadow-xl shadow-black/50">
+                    <img src="${localizedImagePath(locale, 'screen-settings.png')}" alt="${escapeAttribute(c.strictAlt)}" class="w-full max-w-[280px] rounded-[2.5rem] border border-gray-800 shadow-xl shadow-black/50">
                 </div>
             </div>
         </section>
@@ -1125,7 +1198,7 @@ ${nav(locale, 'index', copy, 'max-w-6xl')}
                 </div>
                 <div class="flex-1 flex justify-center lg:justify-start relative">
                     <div class="absolute inset-0 bg-blue-500/10 blur-[80px] rounded-full w-full h-full m-auto"></div>
-                    <img src="${assetPath(locale, 'images/screen-active-session.png')}" alt="${escapeAttribute(c.protectedAlt)}" class="relative z-10 w-full max-w-[280px] rounded-[2.5rem] border border-gray-700 shadow-xl shadow-black/50">
+                    <img src="${localizedImagePath(locale, 'screen-active-session.png')}" alt="${escapeAttribute(c.protectedAlt)}" class="relative z-10 w-full max-w-[280px] rounded-[2.5rem] border border-gray-700 shadow-xl shadow-black/50">
                 </div>
             </div>
         </section>
@@ -1138,7 +1211,7 @@ ${nav(locale, 'index', copy, 'max-w-6xl')}
                     <a href="${relativeHref(locale, locale, 'privacy')}" class="text-systemBlue hover:underline font-medium">${escapeHtml(c.privacyLink)} &rarr;</a>
                 </div>
                 <div class="flex-1 flex justify-center lg:justify-end">
-                    <img src="${assetPath(locale, 'images/screen-privacy.png')}" alt="${escapeAttribute(c.privacyAlt)}" class="w-full max-w-[280px] rounded-[2.5rem] border border-gray-800 shadow-xl shadow-black/50">
+                    <img src="${localizedImagePath(locale, 'screen-privacy.png')}" alt="${escapeAttribute(c.privacyAlt)}" class="w-full max-w-[280px] rounded-[2.5rem] border border-gray-800 shadow-xl shadow-black/50">
                 </div>
             </div>
         </section>
@@ -1158,7 +1231,7 @@ ${nav(locale, 'index', copy, 'max-w-6xl')}
                     </div>
                 </div>
                 <div class="flex-1 flex justify-center lg:justify-start">
-                    <img src="${assetPath(locale, 'images/screen-insights.png')}" alt="${escapeAttribute(c.insightsAlt)}" class="w-full max-w-[280px] rounded-[2.5rem] border border-gray-700 shadow-xl shadow-black/50">
+                    <img src="${localizedImagePath(locale, 'screen-insights.png')}" alt="${escapeAttribute(c.insightsAlt)}" class="w-full max-w-[280px] rounded-[2.5rem] border border-gray-700 shadow-xl shadow-black/50">
                 </div>
             </div>
         </section>
@@ -1248,6 +1321,8 @@ const renderers = {
   support: renderSupport,
   privacy: renderPrivacy,
 };
+
+syncLocalizedMarketingImages();
 
 for (const locale of locales) {
   const copy = translations[locale.code];
